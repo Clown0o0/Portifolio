@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rodolfo — Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Portfólio profissional de desenvolvedor — projetos, competências e contato." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">Menu</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#competencias">Competências</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1>Olá — eu sou <span class="accent">Rodolfo</span></h1>
+          <p class="lead">Desenvolvedor de software | Frontend & Backend | Aplicações web modernas e escaláveis.</p>
+          <div class="cta-row">
+            <a class="btn" href="#projetos">Ver Projetos</a>
+            <a class="btn ghost" href="#contato">Entrar em Contato</a>
+          </div>
+        </div>
+
+        <aside class="profile-card">
+          <img src="assets/Imagem do WhatsApp de 2025-10-14 à(s) 22.22.08_5b8e3348.jpg" alt="Foto de perfil de Rodolfo" class="profile-photo" />
+          <h3>Rodolfo</h3>
+          <p class="muted">Desenvolvedor de Software</p>
+          <ul class="profile-meta">
+            <li>📍 Sua Cidade, País</li>
+            <li>✉️ <a href="mailto:rocraftr@gmail.com">rocraftr@gmail.com</a></li>
+            <li>💼 <a href="https://acesse.one/mQbGm" target="_blank">https://acesse.one/mQbGm</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2>Sobre</h2>
+        <p>Sou um desenvolvedor focado em entregar soluções práticas, eficientes e de alto desempenho. Domino tecnologias modernas e valorizo boas práticas, arquitetura limpa e experiência do usuário.</p>
+      </div>
+    </section>
+
+    <section id="competencias" class="section bg-alt">
+      <div class="container">
+        <h2>Competências</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <h4>Frontend</h4>
+            <p>HTML5, CSS3, JavaScript (ES6+), React, TypeScript</p>
+          </div>
+          <div class="skill">
+            <h4>Backend</h4>
+            <p>Node.js, Python (Flask/Django), REST APIs</p>
+          </div>
+          <div class="skill">
+            <h4>Banco de Dados</h4>
+            <p>PostgreSQL, MySQL, MongoDB</p>
+          </div>
+          <div class="skill">
+            <h4>Outros</h4>
+            <p>Git, Docker, AWS, CI/CD</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <div class="container">
+        <h2>Projetos em destaque</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Dashboard de Métricas</h3>
+            <p class="muted">React + Node.js</p>
+            <p>Aplicação full-stack para visualização de dados em tempo real.</p>
+            <div class="project-actions">
+              <a class="btn small" href="#">Ver Código</a>
+              <a class="btn ghost small" href="#">Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>API de Processamento</h3>
+            <p class="muted">Python + Flask</p>
+            <p>API escalável com filas assíncronas e autenticação JWT.</p>
+            <div class="project-actions">
+              <a class="btn small" href="#">Ver Código</a>
+              <a class="btn ghost small" href="#">Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Site Institucional</h3>
+            <p class="muted">Next.js + CMS</p>
+            <p>Site com CMS headless, otimizado para SEO e performance.</p>
+            <div class="project-actions">
+              <a class="btn small" href="#">Ver Código</a>
+              <a class="btn ghost small" href="#">Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section bg-alt">
+      <div class="container narrow">
+        <h2>Contato</h2>
+        <p>Interessado em trabalhar comigo? Envie uma mensagem:</p>
+
+        <form id="contact-form" class="contact-form" action="javascript:void(0)" novalidate>
+          <div class="form-row">
+            <label for="name">Nome</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Enviar</button>
+          </div>
+
+          <p id="form-feedback" class="muted small" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p>© <span id="year"></span> Rodolfo — Portfólio profissional</p>
+      <nav class="footer-nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
