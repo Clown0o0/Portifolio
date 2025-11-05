@@ -9,6 +9,34 @@
   --transition: all 0.3s ease;
 }
 
+/* Tema escuro */
+:root[data-theme='dark'] {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #3b82f6;
+  --shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+:root {
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --radius: 10px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', Arial, sans-serif;
@@ -197,4 +225,111 @@ body {
   --muted: #94a3b8;
   --accent: #3b82f6;
   --shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos Adicionais para Botões Sociais (Implementação anterior) */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn.btn-social {
+  background: var(--text);
+  color: var(--card);
+  text-align: center;
+  width: 100%; 
+  box-sizing: border-box;
+  padding: 10px 18px;
+}
+
+.btn.btn-social:hover {
+  background: var(--muted);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* --- Responsividade (Mobile First) --- */
+
+/* 1. Esconde o botão hamburger em telas grandes (Desktop) */
+@media (min-width: 769px) {
+  .nav-toggle,
+  .nav-toggle-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 2. Menu de Navegação (Hamburger) */
+  .nav {
+    display: none; /* Esconde a navegação padrão */
+    position: absolute;
+    top: 52px; /* Altura aproximada do header para aparecer abaixo dele */
+    left: 0;
+    right: 0;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    z-index: 90;
+    flex-direction: column;
+    padding: 10px 0;
+    border-top: 1px solid var(--muted);
+    transition: all 0.3s ease;
+  }
+
+  .nav.open {
+    display: flex; /* Mostra o menu quando a classe 'open' é ativada pelo JS */
+  }
+  
+  .nav ul {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .nav ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .nav a {
+    display: block;
+    padding: 10px 16px;
+  }
+  
+  /* 3. Seção Hero - Alinhamento para Mobile */
+  .hero-inner {
+    grid-template-columns: 1fr; /* Alinha em uma única coluna */
+    gap: 40px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  /* 4. Card de Perfil - Fica em cima no mobile e centralizado */
+  .profile-card {
+    order: -1; /* Coloca o card antes do texto na ordem do flex/grid */
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  /* 5. Botões de Ação (Hero) */
+  .cta-row {
+    text-align: center;
+  }
+  
+  /* 6. Grids de Competências e Projetos */
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr; /* Uma coluna para melhor visualização */
+  }
+  
+  /* 7. Ajusta o padding das seções */
+  .section {
+    padding: 40px 16px;
+  }
 }

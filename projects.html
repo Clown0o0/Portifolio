@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projetos — Rodolfo</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Página de projetos — portfólio de Rodolfo" />
+  <script defer src="scripts.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -27,41 +27,12 @@
     <div class="container">
       <h2>Projetos detalhados</h2>
 
-      <article id="proj-1" class="project-detail">
-        <h3>Projeto 1 — Dashboard de Métricas</h3>
-        <p class="muted">React · Node.js · PostgreSQL · Docker</p>
-        <p>Descrição: Dashboard para visualizar métricas de negócio em tempo real, com autenticação JWT, filtros avançados e endpoints otimizados. Implementação com testes unitários e integração contínua.</p>
-        <ul>
-          <li>Responsabilidades: arquitetura, API, front-end, testes e deploy.</li>
-          <li>Resultados: redução de tempo de geração de relatório em 70%.</li>
-        </ul>
-        <p><a class="btn small" href="https://github.com/" target="_blank" rel="noopener">Ver repositório</a></p>
-      </article>
-
-      <hr />
-
-      <article id="proj-2" class="project-detail">
-        <h3>Projeto 2 — API de Processamento</h3>
-        <p class="muted">Python · Flask · Redis · Celery</p>
-        <p>Descrição: API assíncrona para processamento em lote de dados, com filas para tarefas longas e monitoramento. Foco em escalabilidade e resiliência.</p>
-        <ul>
-          <li>Responsabilidades: design de filas, testes de carga, documentação de API.</li>
-          <li>Resultados: sistema capaz de processar 10k jobs/dia com SLA definido.</li>
-        </ul>
-        <p><a class="btn small" href="https://github.com/" target="_blank" rel="noopener">Ver repositório</a></p>
-      </article>
-
-      <hr />
-
-      <article id="proj-3" class="project-detail">
-        <h3>Projeto 3 — Site Institucional</h3>
-        <p class="muted">Next.js · Headless CMS</p>
-        <p>Descrição: Site com CMS headless, otimizado para SEO e performance. Deploy automatizado e monitoramento de uptime.</p>
-        <ul>
-          <li>Responsabilidades: front-end, integração com CMS, otimização SEO.</li>
-          <li>Resultados: melhoria no SEO e velocidade (Lighthouse > 90).</li>
-        </ul>
-        <p><a class="btn small" href="https://github.com/" target="_blank" rel="noopener">Ver repositório</a></p>
+      <article id="proj-banana" class="project-detail">
+        <img src="5412e150-ff13-496b-af83-055631a9be5e.png" alt="Preview Site da Banana" style="width:100%; border-radius:8px; object-fit:cover; margin-bottom:12px;" />
+        <h3>Site da Banana — Demo hospedada no Vercel</h3>
+        <p class="muted">Next.js · Vercel</p>
+        <p>Descrição: Site institucional / demonstração hospedada em Vercel. Acesse o site completo clicando no botão abaixo.</p>
+        <p><a class="btn small" href="https://site-da-banana-qk1g.vercel.app" target="_blank" rel="noopener">Abrir Demo</a></p>
       </article>
     </div>
   </main>
@@ -69,18 +40,6 @@
   <footer class="site-footer">
     <div class="inner">
       <p>© <span id="year-2"></span> Rodolfo — Projetos</p>
-      <a href="index.html" class="btn ghost small">Voltar</a>
-    </div>
-  </footer>
+      <a href="index.html" class="btn ghost small
 
-  <script>
-    // small script para nav toggle neste arquivo
-    document.addEventListener('DOMContentLoaded', () => {
-      const t = document.getElementById('nav-toggle-2');
-      const nav = document.getElementById('main-nav-2');
-      t && t.addEventListener('click', () => nav.classList.toggle('open'));
-      document.getElementById('year-2').textContent = new Date().getFullYear();
-    });
-  </script>
-</body>
-</html>
+}
