@@ -3,23 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rodolfo — Portfólio</title>
+  <title data-translate-key="title_main">Rodolfo — Portfólio</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Portfólio profissional de desenvolvedor — projetos, competências e contato." />
+  <meta name="description" content="Portfólio profissional de desenvolvedor — projetos, competências e contato." data-translate-key="meta_description" />
   <script defer src="scripts.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="inner">
-      <a class="brand" href="index.html">Menu</a>
+      <a class="brand" href="index.html" data-translate-key="nav_menu">Menu</a>
       <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu">☰</button>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+      
+      <div class="control-buttons">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+        <button id="lang-toggle" class="lang-toggle" aria-label="Alternar idioma">🌐</button>
+      </div>
       <nav id="main-nav" class="nav">
         <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#competencias">Competências</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre" data-translate-key="nav_sobre">Sobre</a></li>
+          <li><a href="#competencias" data-translate-key="nav_competencias">Competências</a></li>
+          <li><a href="#projetos" data-translate-key="nav_projetos">Projetos</a></li>
+          <li><a href="#downloads" data-translate-key="nav_docs">Docs</a></li> 
         </ul>
       </nav>
     </div>
@@ -29,24 +33,28 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-left">
-          <h1>Olá — eu sou <span class="accent">Rodolfo</span></h1>
-          <p class="lead">Desenvolvedor de software | Frontend & Backend | Aplicações web modernas e escaláveis.</p>
+          <h1><span data-translate-key="hero_greeting">Olá — eu sou</span> <span class="accent">Rodolfo</span></h1>
+          <p class="lead" data-translate-key="hero_lead_full_wrapper">
+            <span data-translate-key="hero_lead">Desenvolvedor de software</span> | 
+            <span data-translate-key="hero_lead_2">Frontend & Backend</span> | 
+            <span data-translate-key="hero_lead_3">Aplicações web modernas e escaláveis.</span>
+          </p>
           <div class="cta-row">
-            <a class="btn" href="#projetos">Ver Projetos</a>
+            <a class="btn" href="#projetos" data-translate-key="hero_cta">Ver Projetos</a>
           </div>
         </div>
 
         <aside class="profile-card">
           <img src="assets/Imagem do WhatsApp de 2025-10-14 à(s) 22.22.08_5b8e3348.jpg" alt="Foto de perfil de Rodolfo" class="profile-photo" />
           <h3>Rodolfo</h3>
-          <p class="muted">Desenvolvedor de Software</p>
+          <p class="muted" data-translate-key="profile_role">Desenvolvedor de Software</p>
           <ul class="profile-meta">
-            <li>📍 Brasil, São José dos Campos</li>
+            <li data-translate-key="profile_location">📍 Brasil, São José dos Campos</li>
           </ul>
           <div class="social-buttons">
-            <a class="btn btn-social" href="mailto:rocraftr@gmail.com">✉️ E-mail</a>
-            <a class="btn btn-social" href="https://github.com/Clown0o0" target="_blank" rel="noopener">💻 GitHub</a>
-            <a class="btn btn-social" href="https://br.linkedin.com/in/rodolfo-ferreira-836b5b229?trk=people-guest_people_search-card" target="_blank" rel="noopener">🔗 LinkedIn</a>
+            <a class="btn btn-social" href="mailto:rocraftr@gmail.com"><span data-translate-key="social_email">✉️ E-mail</span></a>
+            <a class="btn btn-social" href="https://github.com/Clown0o0" target="_blank" rel="noopener"><span data-translate-key="social_github">💻 GitHub</span></a>
+            <a class="btn btn-social" href="https://br.linkedin.com/in/rodolfo-ferreira-836b5b229?trk=people-guest_people_search-card" target="_blank" rel="noopener"><span data-translate-key="social_linkedin">🔗 LinkedIn</span></a>
           </div>
         </aside>
       </div>
@@ -54,33 +62,33 @@
 
     <section id="sobre" class="section">
       <div class="container">
-        <h2>Sobre</h2>
-        <p>Sou um desenvolvedor focado em entregar soluções práticas, eficientes e de alto desempenho. Domino tecnologias modernas e valorizo boas práticas, arquitetura limpa e experiência do usuário.</p>
+        <h2 data-translate-key="section_about">Sobre</h2>
+        <p data-translate-key="about_text">Sou um desenvolvedor focado em entregar soluções práticas, eficientes e de alto desempenho. Domino tecnologias modernas e valorizo boas práticas, arquitetura limpa e experiência do usuário.</p>
       </div>
     </section>
 
     <section id="competencias" class="section bg-alt">
       <div class="container">
-        <h2>Competências</h2>
+        <h2 data-translate-key="section_skills">Competências</h2>
         <div class="skills-grid">
           <div class="skill">
-            <h4>Frontend</h4>
+            <h4 data-translate-key="skill_frontend_title">Frontend</h4>
             <p>HTML5, CSS3, JavaScript (ES6+), React, TypeScript</p>
           </div>
           <div class="skill">
-            <h4>Backend</h4>
+            <h4 data-translate-key="skill_backend_title">Backend</h4>
             <p>Node.js, Python (Flask/Django), REST APIs</p>
           </div>
           <div class="skill">
-            <h4>Banco de Dados</h4>
+            <h4 data-translate-key="skill_db_title">Banco de Dados</h4>
             <p>PostgreSQL, MySQL, MongoDB</p>
           </div>
           <div class="skill">
-            <h4>Outros</h4>
+            <h4 data-translate-key="skill_other_title">Outros</h4>
             <p>Git, Docker, AWS, CI/CD</p>
           </div>
           <div class="skill">
-            <h4>Competencias linguísticas</h4>
+            <h4 data-translate-key="skill_lang_title">Competencias linguísticas</h4>
             <p>Inglês avançado C1, Alemão Básico</p>
           </div>
         </div>
@@ -89,32 +97,61 @@
 
     <section id="projetos" class="section">
       <div class="container">
-        <h2>Projetos em destaque</h2>
+        <h2 data-translate-key="section_projects">Projetos em destaque</h2>
         <div class="projects-grid">
           <article class="project-card">
             <img src="assets/site_da_banana_placeholder.png.png" alt="Preview 1 projeto universitário" style="width:100%; border-radius:8px; object-fit:cover; height:200px;" />
-            <h3>Site da Banana</h3>
+            <h3 data-translate-key="project_banana_title">Site da Banana</h3>
             <p class="muted">Next.js · Vercel</p>
-            <p>Preview real do projeto “Site da Banana”.</p>
+            <p data-translate-key="project_banana_desc">Preview real do projeto “Site da Banana”.</p>
             <div class="project-actions">
-              <a class="btn small" href="https://site-da-banana-qk1g.vercel.app" target="_blank" rel="noopener">Abrir Site</a>
-              <a class="btn ghost small" href="projects.html#proj-banana">Detalhes</a>
+              <a class="btn small" href="https://site-da-banana-qk1g.vercel.app" target="_blank" rel="noopener" data-translate-key="project_banana_cta_site">Abrir Site</a>
+              <a class="btn ghost small" href="projects.html#proj-banana" data-translate-key="project_banana_cta_details">Detalhes</a>
             </div>
           </article>
 
           <article class="project-card">
             <img src="assets/sjc_ponto_turistico.png" alt="Parque Vicentina Aranha - SJC" style="width:100%; border-radius:8px; object-fit:cover; height:200px;" />
-            <h3>API de Processamento — Censo SJC</h3>
+            <h3 data-translate-key="project_api_title">API de Processamento — Censo SJC</h3>
             <p class="muted">Python · Flask · ETL</p>
-            <p>API de processamento de dados do censo de São José dos Campos.</p>
+            <p data-translate-key="project_api_desc">API de processamento de dados do censo de São José dos Campos.</p>
           </article>
         </div>
       </div>
     </section>
+    
+    <section id="downloads" class="section bg-alt">
+      <div class="container">
+        <h2 data-translate-key="section_docs">Currículo e Documentos</h2>
+        <p class="muted" data-translate-key="docs_subtitle">Acesse meus documentos profissionais.</p>
+        <div class="skills-grid">
+          
+          <div class="skill document-card">
+            <h4 data-translate-key="doc_cv_title">Currículo (PDF)</h4>
+            <p class="muted" data-translate-key="doc_cv_desc">Experiência e formação completa. (Aberto em nova aba)</p>
+            <a class="btn small download-btn" href="assets/Curriculo_Rodolfo_Formal_Classico.pdf" target="_blank" rel="noopener" data-translate-key="doc_cv_cta">
+              📄 Baixar / Visualizar
+            </a>
+          </div>
+
+          <div class="skill document-card">
+            <h4 data-translate-key="doc_cert_title">Certificado SCRUM</h4>
+            <p class="muted" data-translate-key="doc_cert_desc">Certificação pela Escola de Inovadores INOVA CPS. (40h)</p>
+            <a class="btn small download-btn" href="assets/CERTIFICADO_-_2025-2.pdf" target="_blank" rel="noopener" data-translate-key="doc_cert_cta">
+              🏆 Visualizar Certificado
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="inner">
-      <p>©RodolfoFerreira <span
-
-}
+      <p><span data-translate-key="footer_text">©RodolfoFerreira</span> <span id="year"></span></p> 
+    </div>
+  </footer>
+</body>
+</html>
