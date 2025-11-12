@@ -1,58 +1,51 @@
-<!doctype html> <!-- Documento HTML5 -->
-<html lang="pt-BR"> <!-- Define idioma -->
+<!doctype html> 
+<html lang="pt-BR"> 
 <head>
-  <meta charset="utf-8" /> <!-- Codificação -->
-  <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- Responsividade -->
-  <title>Projetos — Rodolfo</title> <!-- Título da aba -->
-  <link rel="stylesheet" href="style.css" /> <!-- CSS externo -->
-  <script defer src="scripts.js"></script> <!-- JavaScript -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-translate-key="proj_title_page">Projetos — Rodolfo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="scripts.js"></script>
 </head>
 <body>
-  <!-- Cabeçalho -->
   <header class="site-header">
     <div class="inner">
-      <a class="brand" href="index.html">Rodolfo</a> <!-- Link para página inicial -->
-      <button id="nav-toggle-2" class="nav-toggle" aria-label="Abrir menu">☰</button> <!-- Botão do menu -->
-
-      <!-- Botões de controle -->
+      <a class="brand" href="index.html">Rodolfo</a>
+      <button id="nav-toggle-2" class="nav-toggle" aria-label="Abrir menu">☰</button>
+      
       <div class="control-buttons">
         <button id="theme-toggle-2" class="theme-toggle" aria-label="Alternar tema">🌙</button>
         <button id="lang-toggle-2" class="lang-toggle" aria-label="Alternar idioma">🌐</button>
       </div>
-
-      <!-- Menu de navegação -->
       <nav id="main-nav-2" class="nav">
         <ul>
-          <li><a href="index.html#sobre">Sobre</a></li>
-          <li><a href="index.html#competencias">Competências</a></li>
-          <li><a href="index.html#projetos">Projetos</a></li>
-          <li><a href="index.html#downloads">Docs</a></li> 
+          <li><a href="index.html#sobre" data-translate-key="nav_sobre">Sobre</a></li>
+          <li><a href="index.html#competencias" data-translate-key="nav_competencias">Competências</a></li>
+          <li><a href="index.html#projetos" data-translate-key="nav_projetos">Projetos</a></li>
+          <li><a href="index.html#downloads" data-translate-key="nav_docs">Docs</a></li> 
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Corpo principal -->
   <main class="section">
     <div class="container">
-      <h2>Projetos detalhados</h2>
+      <h2 data-translate-key="proj_title">Projetos detalhados</h2>
 
-      <!-- Projeto detalhado -->
       <article id="proj-banana" class="project-detail">
         <img src="5412e150-ff13-496b-af83-055631a9be5e.png" alt="Preview Site da Banana" style="width:100%; border-radius:8px; object-fit:cover; margin-bottom:12px;" />
-        <h3>Site da Banana — Demo hospedada no Vercel</h3>
+        <h3 data-translate-key="proj_banana_h3">Site da Banana — Demo hospedada no Vercel</h3>
         <p class="muted">Next.js · Vercel</p>
-        <p>Descrição: Site institucional / demonstração hospedada em Vercel.</p>
-        <p><a class="btn small" href="https://site-da-banana-qk1g.vercel.app" target="_blank">Abrir Demo</a></p>
+        <p data-translate-key="proj_banana_desc_detail">Descrição: Site institucional / demonstração hospedada em Vercel. Acesse o site completo clicando no botão abaixo.</p>
+        <p><a class="btn small" href="https://site-da-banana-qk1g.vercel.app" target="_blank" rel="noopener" data-translate-key="proj_banana_cta">Abrir Demo</a></p>
       </article>
     </div>
   </main>
 
-  <!-- Rodapé -->
   <footer class="site-footer">
     <div class="inner">
-      <p>© <span id="year-2"></span> Rodolfo — Projetos</p>
-      <a href="index.html" class="btn ghost small">Voltar</a> <!-- Botão para voltar à página inicial -->
+      <p><span data-translate-key="footer_copy">©</span> <span id="year-2"></span> <span data-translate-key="footer_text">RodolfoFerreira</span> — <span data-translate-key="proj_footer">Projetos</span></p>
+      <a href="index.html" class="btn ghost small" data-translate-key="back_home">Voltar</a>
     </div>
   </footer>
 </body>
