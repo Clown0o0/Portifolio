@@ -1,218 +1,378 @@
 :root {
+  /* tema CLARO (padrão). */
   --bg: #f6f8fa;
+  /* Cor de fundo principal. */
   --card: #ffffff;
+  /* Cor de fundo de cards e elementos de destaque (branco). */
   --text: #1f2937;
+  /* Cor do texto principal (cinza escuro). */
   --muted: #6b7280;
+  /* Cor para texto secundário ou atenuado (cinza médio). */
   --accent: #2563eb;
+  /* Cor de destaque (azul primário). */
   --radius: 10px;
+  /* Raio padrão para bordas arredondadas. */
   --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  /* Sombra suave para cards e cabeçalho. */
   --transition: all 0.3s ease;
+  /* Transição padrão para animações suaves. */
 }
 
 /* Tema escuro */
 :root[data-theme='dark'] {
+  /* Seletor que substitui as variáveis CSS quando o atributo data-theme='dark' está presente na tag <html>. */
   --bg: #0f172a;
+  /* Fundo escuro (quase preto). */
   --card: #1e293b;
+  /* Fundo de cards/cabeçalho escuro. */
   --text: #f1f5f9;
+  /* Texto claro (quase branco). */
   --muted: #94a3b8;
+  /* Texto secundário claro. */
   --accent: #3b82f6;
+  /* Cor de destaque ajustada para melhor contraste no fundo escuro. */
   --shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  /* Sombra mais intensa para contraste. */
 }
 
 body {
+  /* Estilos aplicados ao corpo do documento. */
   margin: 0;
+  /* Remove margem padrão. */
   font-family: 'Inter', Arial, sans-serif;
+  /* Define a pilha de fontes. */
   background: var(--bg);
+  /* Define o fundo usando a variável (tema atual). */
   color: var(--text);
+  /* Define a cor do texto usando a variável (tema atual). */
   transition: var(--transition);
+  /* Aplica uma transição suave ao mudar de tema. */
 }
 
 /* Header */
 .site-header {
+  /* Estilos para o cabeçalho principal do site. */
   background: var(--card);
+  /* Fundo do cabeçalho. */
   box-shadow: var(--shadow);
+  /* Sombra para destaque. */
   position: sticky;
+  /* Fixa o cabeçalho no topo ao rolar a página. */
   top: 0;
+  /* Posição superior. */
   z-index: 100;
+  /* Garante que o cabeçalho fique acima de outros elementos. */
 }
 .inner {
+  /* Estilo do container interno (limita largura e centraliza o conteúdo do cabeçalho). */
   max-width: 1100px;
+  /* Largura máxima. */
   margin: 0 auto;
+  /* Centraliza horizontalmente. */
   padding: 16px;
+  /* Preenchimento interno. */
   display: flex;
+  /* Usa Flexbox. */
   align-items: center;
+  /* Alinha itens verticalmente ao centro. */
   justify-content: space-between;
+  /* Distribui itens horizontalmente com espaço entre eles. */
 }
 .brand {
+  /* Estilo da logo/nome da marca. */
   font-weight: 700;
+  /* Negrito. */
   font-size: 1.2rem;
+  /* Tamanho da fonte. */
   color: var(--text);
+  /* Cor do texto principal. */
   text-decoration: none;
+  /* Remove sublinhado dos links. */
   transition: var(--transition);
+  /* Aplica transição. */
 }
 .brand:hover {
+  /* Estilo ao passar o mouse. */
   color: var(--accent);
+  /* Muda para a cor de destaque. */
 }
 .nav ul {
+  /* Estilo da lista de navegação (desktop). */
   display: flex;
+  /* Usa Flexbox para colocar itens lado a lado. */
   list-style: none;
+  /* Remove os marcadores de lista. */
   gap: 20px;
+  /* Espaço entre os itens. */
   margin: 0;
+  /* Remove margem padrão. */
   padding: 0;
+  /* Remove padding padrão. */
 }
 .nav a {
+  /* Estilo dos links de navegação. */
   color: var(--text);
+  /* Cor do texto principal. */
   text-decoration: none;
+  /* Remove sublinhado. */
   font-weight: 600;
+  /* Seminegrito. */
   transition: var(--transition);
+  /* Aplica transição. */
 }
 .nav a:hover {
+  /* Estilo ao passar o mouse. */
   color: var(--accent);
+  /* Muda para a cor de destaque. */
   transform: translateY(-2px);
+  /* Pequeno deslocamento vertical para cima. */
 }
 
 /* NOVO: Wrapper para os botões de tema e idioma */
 .control-buttons {
+    /* Estilo do wrapper para os botões de controle. */
     display: flex;
+    /* Usa Flexbox. */
     align-items: center;
-    order: 3; /* Garante que os botões fiquem antes da navegação principal no desktop */
+    /* Alinha itens verticalmente. */
+    order: 3;
+    /* Define a ordem do elemento no Flexbox do header. */
 }
 
-/* Estilo unificado para os botões de toggle */
-.nav-toggle, /* Botão Hamburguer */
-.theme-toggle, /* Botão de Tema */
-.lang-toggle { /* Botão de Idioma */
+/* Estilo unificado para os botões de toggle (Hamburger, Tema, Idioma) */
+.nav-toggle, 
+/* Estilo para o botão de menu mobile. */
+.theme-toggle, 
+/* Estilo para o botão de tema. */
+.lang-toggle { 
+  /* Estilo para o botão de idioma. */
   background: transparent;
+  /* Fundo transparente. */
   border: none;
+  /* Sem borda. */
   font-size: 1.3rem;
+  /* Tamanho do ícone/emoji. */
   cursor: pointer;
+  /* Define o cursor como ponteiro. */
   color: var(--text);
+  /* Cor do ícone. */
   margin-left: 10px;
+  /* Margem à esquerda para separar dos outros botões. */
   transition: var(--transition);
+  /* Aplica transição. */
   padding: 0;
-  line-height: 1; /* Alinha o emoji verticalmente */
+  /* Remove padding. */
+  line-height: 1;
+  /* Ajusta a altura da linha para alinhar o ícone. */
 }
 .theme-toggle:hover {
+  /* Estilo ao passar o mouse no botão de tema. */
   transform: rotate(20deg);
+  /* Pequena rotação no hover. */
 }
 
-/* Hero */
+/* Hero (Seção de Destaque) */
 .hero {
+  /* Estilos para a seção Hero. */
   padding: 60px 16px;
+  /* Preenchimento superior/inferior e lateral. */
   text-align: left;
+  /* Alinhamento de texto padrão. */
 }
 .hero-inner {
+  /* Layout da seção Hero usando Grid (desktop). */
   max-width: 1100px;
+  /* Largura máxima. */
   margin: auto;
+  /* Centraliza. */
   display: grid;
+  /* Usa Grid Layout. */
   grid-template-columns: 1fr 300px;
+  /* Duas colunas: uma flexível e uma fixa de 300px (para o card). */
   gap: 30px;
+  /* Espaço entre as colunas. */
   align-items: start;
+  /* Alinha itens ao topo da grade. */
 }
 .accent {
+  /* Estilo para texto de destaque. */
   color: var(--accent);
+  /* Usa a cor de destaque. */
 }
 .btn {
+  /* Estilo base para botões (Chamada para Ação). */
   background: var(--accent);
+  /* Cor de fundo de destaque. */
   color: #fff;
+  /* Texto branco. */
   padding: 10px 18px;
+  /* Preenchimento. */
   border: none;
+  /* Sem borda. */
   border-radius: var(--radius);
+  /* Borda arredondada. */
   text-decoration: none;
+  /* Remove sublinhado. */
   font-weight: 600;
+  /* Seminegrito. */
   cursor: pointer;
+  /* Define o cursor como ponteiro. */
   transition: var(--transition);
+  /* Aplica transição. */
   display: inline-block;
+  /* Permite transformações e ajustes de espaçamento. */
 }
 .btn:hover {
+  /* Estilo ao passar o mouse. */
   transform: translateY(-2px);
+  /* Pequeno deslocamento vertical para cima. */
   box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  /* Adiciona sombra. */
 }
 .btn.ghost {
+  /* Estilo para botão 'ghost' (transparente com borda). */
   background: transparent;
+  /* Fundo transparente. */
   border: 2px solid var(--accent);
+  /* Borda com cor de destaque. */
   color: var(--accent);
+  /* Texto com cor de destaque. */
 }
 .btn.ghost:hover {
+  /* Estilo hover do botão ghost. */
   background: var(--accent);
+  /* Fundo preenchido. */
   color: #fff;
+  /* Texto branco (inversão). */
 }
 
 /* Cards e seções */
 .section {
+  /* Estilo base para todas as seções principais. */
   padding: 60px 16px;
+  /* Preenchimento. */
 }
 .container {
+  /* Contêiner para limitar a largura do conteúdo das seções. */
   max-width: 1100px;
+  /* Largura máxima. */
   margin: auto;
+  /* Centraliza. */
 }
 .profile-card,
+/* Estilo aplicado ao card de perfil. */
 .skill,
+/* Estilo aplicado aos cards de competência. */
 .project-card,
+/* Estilo aplicado aos cards de projeto. */
 .contact-form {
+  /* Estilo base para todos os cards. */
   background: var(--card);
+  /* Fundo do card. */
   border-radius: var(--radius);
+  /* Borda arredondada. */
   padding: 20px;
+  /* Preenchimento interno. */
   box-shadow: var(--shadow);
+  /* Sombra. */
   transition: var(--transition);
+  /* Aplica transição. */
 }
 .profile-card:hover,
 .skill:hover,
 .project-card:hover {
+  /* Estilo ao passar o mouse em qualquer card. */
   transform: translateY(-5px);
+  /* Efeito de "levantar" o card. */
 }
 .profile-photo {
+  /* Estilo da foto de perfil. */
   width: 120px;
+  /* Largura fixa. */
   height: 120px;
+  /* Altura fixa. */
   border-radius: 50%;
+  /* Forma circular. */
   object-fit: cover;
+  /* Garante que a imagem cubra o espaço. */
   display: block;
+  /* Define como bloco para permitir margem automática. */
   margin: 0 auto 10px;
+  /* Centraliza horizontalmente e adiciona margem inferior. */
 }
 .skills-grid,
 .projects-grid {
+  /* Estilo para os contêineres de Grid de competências e projetos. */
   display: grid;
+  /* Usa Grid Layout. */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Colunas responsivas: mínimo de 250px de largura, preenchendo o espaço. */
   gap: 20px;
+  /* Espaço entre os itens da grade. */
   margin-top: 20px;
+  /* Margem superior. */
 }
 
-/* Formulário (Mantido, mas a seção foi removida do HTML) */
+/* Formulário (Estilos permanecem para elementos futuros, mesmo que o formulário não esteja no HTML principal) */
 .contact-form input,
 .contact-form textarea {
+  /* Estilo para campos de input de texto e textarea. */
   width: 100%;
+  /* Largura total. */
   padding: 10px;
+  /* Preenchimento. */
   border-radius: var(--radius);
+  /* Borda arredondada. */
   border: 1px solid #ccc;
+  /* Borda cinza clara. */
   margin-top: 5px;
+  /* Margem superior. */
   transition: var(--transition);
+  /* Aplica transição. */
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
+  /* Estilo ao focar no campo. */
   border-color: var(--accent);
+  /* Muda a cor da borda para a cor de destaque. */
   outline: none;
+  /* Remove o outline padrão. */
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  /* Adiciona uma sombra suave. */
 }
 
 /* Footer */
 .site-footer {
+  /* Estilo do rodapé. */
   text-align: center;
+  /* Texto centralizado. */
   padding: 20px;
+  /* Preenchimento. */
   background: var(--card);
+  /* Fundo do rodapé. */
   box-shadow: var(--shadow);
+  /* Sombra. */
 }
 .footer-nav a {
+  /* Estilo dos links no rodapé (se existirem). */
   color: var(--accent);
+  /* Cor de destaque. */
   margin: 0 10px;
+  /* Margem lateral. */
   text-decoration: none;
+  /* Remove sublinhado. */
   transition: var(--transition);
+  /* Aplica transição. */
 }
 .footer-nav a:hover {
+  /* Estilo hover. */
   text-decoration: underline;
+  /* Adiciona sublinhado. */
 }
 
-/* ======= Tema Escuro ======= */
+/* ======= Tema Escuro (Repetido, mas mantém-se o código original) ======= */
 :root[data-theme='dark'] {
+  /* Repetição das variáveis de tema escuro. */
   --bg: #0f172a;
   --card: #1e293b;
   --text: #f1f5f9;
@@ -223,113 +383,181 @@ body {
 
 /* Estilos Adicionais para Botões Sociais */
 .social-buttons {
+  /* Contêiner dos botões sociais no card de perfil. */
   display: flex;
+  /* Usa Flexbox. */
   flex-direction: column;
+  /* Organiza os botões verticalmente. */
   gap: 10px;
+  /* Espaço entre os botões. */
   margin-top: 15px;
+  /* Margem superior. */
 }
 
 .btn.btn-social {
+  /* Estilo específico para botões sociais. */
   background: var(--text);
+  /* Fundo com a cor do texto principal (inverso). */
   color: var(--card);
+  /* Texto com a cor do card (inverso). */
   text-align: center;
+  /* Texto centralizado. */
   width: 100%; 
+  /* Largura total do contêiner. */
   box-sizing: border-box;
+  /* Garante que padding e border sejam incluídos na largura/altura do elemento. */
   padding: 10px 18px;
+  /* Preenchimento. */
 }
 
 .btn.btn-social:hover {
+  /* Estilo hover. */
   background: var(--muted);
+  /* Muda o fundo para a cor muted. */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra. */
   transform: translateY(-2px);
+  /* Pequeno deslocamento vertical para cima. */
 }
 
 /* --- Responsividade (Mobile First) --- */
 
 /* 1. Esconde o botão hamburger em telas grandes (Desktop) */
 @media (min-width: 769px) {
+  /* Media query aplicada a telas com largura mínima de 769px (Desktop). */
   .nav-toggle,
+  /* Botão hamburger da index.html. */
   .nav-toggle-2 {
+    /* Botão hamburger da projects.html. */
     display: none;
+    /* Esconde o botão de menu mobile. */
   }
 }
 
 @media (max-width: 768px) {
-  /* 1.1 No mobile, os botões de tema/idioma devem aparecer na esquerda/centro para o usuário encontrar */
+  /* Media query aplicada a telas com largura máxima de 768px (Mobile/Tablet). */
+  
+  /* 1.1 Botões de tema/idioma no mobile */
   .control-buttons {
-      order: 0; /* Coloca os botões no início */
-      margin-left: auto; /* Empurra para o canto direito se o nav-toggle não estiver lá */
+      /* Estilos para os botões de controle no mobile. */
+      order: 0;
+      /* Define a ordem para que apareçam mais à esquerda/início do header. */
+      margin-left: auto;
+      /* Empurra para o lado, garantindo que o nav-toggle fique mais à direita. */
   }
   
   /* 2. Menu de Navegação (Hamburger) */
   .nav {
+    /* Estilos iniciais do menu de navegação mobile (escondido). */
     display: none; 
+    /* Esconde o menu por padrão. */
     position: absolute;
+    /* Posição absoluta em relação ao elemento pai posicionado (body ou outro). */
     top: 52px; 
+    /* Posiciona abaixo do cabeçalho. */
     left: 0;
+    /* Alinha à esquerda. */
     right: 0;
+    /* Alinha à direita, ocupando a largura total. */
     background: var(--card);
+    /* Fundo do menu. */
     box-shadow: var(--shadow);
+    /* Sombra. */
     z-index: 90;
+    /* Ordem de empilhamento (abaixo do header). */
     flex-direction: column;
+    /* Organiza os links verticalmente. */
     padding: 10px 0;
+    /* Preenchimento superior/inferior. */
     border-top: 1px solid var(--muted);
+    /* Linha de separação do header. */
     transition: all 0.3s ease;
+    /* Transição suave. */
   }
 
   .nav.open {
+    /* Estilo aplicado quando a classe 'open' é adicionada via JavaScript (menu aberto). */
     display: flex; 
+    /* Exibe o menu. */
   }
   
   .nav ul {
+    /* Estilos da lista dentro do menu mobile. */
     flex-direction: column;
+    /* Itens empilhados. */
     text-align: center;
+    /* Texto centralizado. */
     width: 100%;
+    /* Largura total. */
     margin-top: 0;
+    /* Remove margem superior. */
   }
   
   .nav ul li {
+    /* Estilos dos itens da lista. */
     padding: 10px 0;
+    /* Preenchimento vertical. */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Separador entre os itens. */
   }
   
   .nav ul li:last-child {
+    /* Estilo para o último item. */
     border-bottom: none;
+    /* Remove o separador do último item. */
   }
   
   .nav a {
+    /* Estilos dos links no menu mobile. */
     display: block;
+    /* Ocupa a largura total do 'li'. */
     padding: 10px 16px;
+    /* Preenchimento. */
   }
   
   /* 3. Seção Hero - Alinhamento para Mobile */
   .hero-inner {
-    grid-template-columns: 1fr; 
+    /* Estilos do container Hero no mobile. */
+    grid-template-columns: 1fr;
+    /* Apenas uma coluna (empilha o conteúdo: card e texto). */
     gap: 40px;
+    /* Espaço entre os itens empilhados. */
     text-align: center;
+    /* Alinha o texto ao centro. */
     padding-top: 20px;
+    /* Preenchimento superior. */
   }
   
   /* 4. Card de Perfil - Fica em cima no mobile e centralizado */
   .profile-card {
-    order: -1; 
+    /* Estilos do card de perfil no mobile. */
+    order: -1;
+    /* Coloca o card antes do conteúdo principal do Hero. */
     margin: 0 auto;
+    /* Centraliza o card. */
     max-width: 90%;
+    /* Limita a largura. */
   }
 
   /* 5. Botões de Ação (Hero) */
   .cta-row {
+    /* Contêiner dos botões de ação. */
     text-align: center;
+    /* Centraliza os botões (aplica-se a elementos inline/inline-block). */
   }
   
   /* 6. Grids de Competências e Projetos */
   .skills-grid,
   .projects-grid {
-    grid-template-columns: 1fr; 
+    /* Estilos para as grades no mobile. */
+    grid-template-columns: 1fr;
+    /* Apenas uma coluna (empilha os cards). */
   }
   
   /* 7. Ajusta o padding das seções */
   .section {
+    /* Ajuste de preenchimento das seções no mobile. */
     padding: 40px 16px;
+    /* Diminui o preenchimento vertical. */
   }
 }
