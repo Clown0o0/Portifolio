@@ -330,3 +330,14 @@ body {
   gap: 12px;
   flex-wrap: wrap;
 }
+
+.skill {
+    position: relative;
+    cursor: default;           /* evita cursor de texto */
+    user-select: none;         /* evita seleção acidental */
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
